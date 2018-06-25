@@ -1,8 +1,8 @@
 const button = document.querySelector('button');
 
 const changeHeader = function() {
-    const p = document.querySelector('h1');
-    p.textContent = 'Merry Chrismess';
+    const p = document.querySelector('#chris');
+    p.textContent = 'Beware of Chris';
 }
 
 button.addEventListener('click', changeHeader);
