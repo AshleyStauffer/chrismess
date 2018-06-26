@@ -40,23 +40,32 @@ button {
     width: 150px;
     font-family: 'IM Fell English SC', Helvetica, Arial, sans-serif;
 }
+
+#wrapper {
+    height: 450px;
+    width: 900px;
+    margin: auto;
+}
+
 #flicks {
     color: white;
     background-color: rgb(136, 27, 0);
-    height: 250px;
-    width: 900px;
-    margin: auto;
+    height: 100%;
+    width: 48%;
+    margin: 2px;
     border-radius: 10px;
     padding: 5px;
     font-size: 30px;
+    float: left;
 }
 #actors {
     color: white;
     background-color: rgb(12, 65, 90);
-    height: 250px;
-    width: 900px;
-    margin: auto;
+    height: 100%;
+    width: 48%;
+    margin: 2px;
     border-radius: 10px;
     padding: 5px;
     font-size: 30px;
+    float: right;
 }
