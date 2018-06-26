@@ -1,13 +1,17 @@
-const button = document.querySelector('#submitChris');
+const form = document.querySelector('form#flickForm')
 
-document.querySelector("#submitChris").addEventListener("click", function(event) {
-    document.getElementById("submitChris");
-    event.preventDefault();
-}, false);
+const createList = function(ev) {
+  ev.preventDefault()
+  const f = ev.target
 
-const changeHeader = function() {
-    const p = document.querySelector('h1');
-    p.textContent = document.getElementById('textChris').value;
+  const flickName = f.flickName.value
+  const item = document.createElement('li')
+  item.textContent = flickName
+
+  const list = document.querySelector('#flicks')
+  list.appendChild(item)
+
+  f.reset()
 }
 
-button.addEventListener('click', changeHeader);
+form.addEventListener('submit', createList)

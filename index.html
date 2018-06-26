@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Chrismess - A whole mess o' Chrisses</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
-    
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chrismess - A whole mess o' Chrisses</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 <body>
-    <h1>Chrismess</h1>
-    <h1 id="chris">The messiest time of the year</h1>
+  <h1>Chrismess</h1>
 
-    <button>Change Heading</button> 
+  <form id="flickForm">
+    <input
+      type="text"
+      name="flickName"
+      placeholder="Enter a flick"
+      autofocus
+    >
+    <input 
+        type="text" 
+        name="actorName"
+        placeholder="Enter an actor"
+    >
+    <button type="submit">Add to list</button>
+    
+  </form>
 
-</br></br>
+  <ul id="flicks"></ul>
 
-    <form>
-        <input type="text" placeholder="Favorite Chris?" id="textChris">
-        <input type="submit" id="submitChris">
-    </form>
-    <script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
