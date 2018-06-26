@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC|Slabo+27px');
 
 body {
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    background: linear-gradient(rgb(66, 67, 177), rgb(199, 59, 24));
+    font-family: 'IM Fell English SC', Helvetica, Arial, sans-serif;
+    background: radial-gradient(90% 60%, white, black);
 }
 
 h1 {
     text-align: center;
     font-size: 75px;
+    color: rgb(233, 178, 60);
+    margin: 0;
 }
 
 form {
@@ -22,7 +25,7 @@ input {
     outline: none;
     padding: 5px;
     font-size: 25px;
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
+    font-family: 'IM Fell English SC', Helvetica, Arial, sans-serif;
 }
 
 button {
@@ -35,6 +38,7 @@ button {
     font-size: 20px;
     height: 45px;
     width: 150px;
+    font-family: 'IM Fell English SC', Helvetica, Arial, sans-serif;
 }
 #flicks {
     color: white;
@@ -44,6 +48,7 @@ button {
     margin: auto;
     border-radius: 10px;
     padding: 5px;
+    font-size: 30px;
 }
 #actors {
     color: white;
@@ -53,4 +58,5 @@ button {
     margin: auto;
     border-radius: 10px;
     padding: 5px;
+    font-size: 30px;
 }
