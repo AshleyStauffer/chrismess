@@ -29,19 +29,7 @@ class App {
         item.appendChild(span)
       })
 
-      // add a delete button
-      const del = document.createElement('button')
-      const word = document.createTextNode('Remove flick')
-      del.appendChild(word)
-      item.appendChild(del)
-
-      // make delete button functional
-      del.addEventListener('click', () => {
-        while (item.hasChildNodes()) {   
-            item.removeChild(item.firstChild);
-        }
-        
-      })
+      
       
       return item
     }
@@ -60,7 +48,22 @@ class App {
   
       const list = document.querySelector('#flicks')
       list.appendChild(item)
-      
+      // add a delete button
+      const del = document.createElement('button')
+      const word = document.createTextNode('Remove flick')
+      del.appendChild(word)
+      item.appendChild(del)
+
+      // make delete button functional
+      del.addEventListener('click', () => {
+        while (item.hasChildNodes()) {   
+            item.removeChild(item.firstChild);
+        }
+        list.removeChild(item)
+        //let i = this.flicks.indexOf(flick.movie)
+        //this.flicks.splice(i, 1)
+        //console.log(this.flicks)
+      })
       f.reset()
       f.flickName.focus()
     }
