@@ -48,6 +48,7 @@ class App {
   
       const list = document.querySelector('#flicks')
       list.appendChild(item)
+
       // add a delete button
       const del = document.createElement('button')
       const word = document.createTextNode('Remove flick')
@@ -56,13 +57,15 @@ class App {
 
       // make delete button functional
       del.addEventListener('click', () => {
+        let i = this.flicks.indexOf(flick)
+        this.flicks.splice(i, 1)
+
         while (item.hasChildNodes()) {   
             item.removeChild(item.firstChild);
         }
         list.removeChild(item)
-        //let i = this.flicks.indexOf(flick.movie)
-        //this.flicks.splice(i, 1)
-        //console.log(this.flicks)
+       
+        
       })
       f.reset()
       f.flickName.focus()
