@@ -47,6 +47,13 @@ class App {
       const item = this.renderItem(flick)
   
       const list = document.querySelector('#flicks')
+
+      // add a favorite button 
+      const fav = document.createElement('button')
+      const like = document.createTextNode('Favorite')
+      fav.appendChild(like)
+      item.appendChild(fav)
+      
       list.appendChild(item)
 
       // add a delete button
