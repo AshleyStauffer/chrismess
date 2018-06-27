@@ -40,6 +40,7 @@ class App {
       const flick = {
         movie: f.flickName.value,
         chris: f.chrisName.value,
+        
       }
       
       this.flicks.push(flick)
@@ -57,7 +58,15 @@ class App {
       // make favorite button functional
       fav.addEventListener('click', () => {
           item.classList.toggle('favorite')
-          console.log('hey')
+          
+          let i = this.flicks.indexOf(flick)
+          if(flick.favorite == 'YES') {
+            flick.favorite = 'NO'
+          }
+          else {
+               flick.favorite = 'YES'
+          }
+          console.log(flick)
       })
 
       list.appendChild(item)
