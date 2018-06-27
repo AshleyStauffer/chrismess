@@ -34,6 +34,14 @@ class App {
       const word = document.createTextNode('Remove flick')
       del.appendChild(word)
       item.appendChild(del)
+
+      // make delete button functional
+      del.addEventListener('click', () => {
+        while (item.hasChildNodes()) {   
+            item.removeChild(item.firstChild);
+        }
+        
+      })
       
       return item
     }
@@ -53,9 +61,6 @@ class App {
       const list = document.querySelector('#flicks')
       list.appendChild(item)
       
-      
-      
-  
       f.reset()
       f.flickName.focus()
     }
