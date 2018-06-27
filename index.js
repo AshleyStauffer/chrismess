@@ -28,6 +28,12 @@ class App {
         const span = this.renderProperty(propertyName, flick[propertyName])
         item.appendChild(span)
       })
+
+      // add a delete button
+      const del = document.createElement('button')
+      const word = document.createTextNode('Remove flick')
+      del.appendChild(word)
+      item.appendChild(del)
       
       return item
     }
@@ -38,7 +44,6 @@ class App {
       const flick = {
         movie: f.flickName.value,
         chris: f.chrisName.value,
-        
       }
       
       this.flicks.push(flick)
@@ -48,10 +53,7 @@ class App {
       const list = document.querySelector('#flicks')
       list.appendChild(item)
       
-      const del = document.createElement('button')
-      const word = document.createTextNode('Remove flick')
-      del.appendChild(word)
-      document.body.appendChild(del)
+      
       
   
       f.reset()
