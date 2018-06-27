@@ -1,7 +1,7 @@
 class App {
     constructor() {
       const form = document.querySelector('form#flickForm')
-      let flicks = []
+       this.flicks = []
       form.addEventListener('submit', (ev) => {
         ev.preventDefault()
         this.handleSubmit(ev)
@@ -38,19 +38,26 @@ class App {
       const flick = {
         movie: f.flickName.value,
         chris: f.chrisName.value,
+        
       }
       
-      flicks.push(flick)
+      this.flicks.push(flick)
 
       const item = this.renderItem(flick)
   
       const list = document.querySelector('#flicks')
       list.appendChild(item)
+      
+      const del = document.createElement('button')
+      const word = document.createTextNode('Remove flick')
+      del.appendChild(word)
+      document.body.appendChild(del)
+      
   
       f.reset()
       f.flickName.focus()
     }
 
   }
-  let flicks = []
+ 
   const app = new App()
