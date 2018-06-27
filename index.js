@@ -54,6 +54,12 @@ class App {
       fav.appendChild(like)
       item.appendChild(fav)
       
+      // make favorite button functional
+      fav.addEventListener('click', () => {
+          item.classList.toggle('favorite')
+          console.log('hey')
+      })
+
       list.appendChild(item)
 
       // add a delete button
