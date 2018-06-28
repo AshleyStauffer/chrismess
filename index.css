@@ -3,14 +3,19 @@
 
 body {
     font-family: 'IM Fell English SC', Helvetica, Arial, sans-serif;
-    background: white;
+    background: linear-gradient(to top, black, white);
+    height: 100%;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h1 {
     text-align: center;
-    font-size: 75px;
-    color: rgb(233, 178, 60);
-    margin: 0;
+    font-size: 8vw;
+    color: rgb(78, 216, 51);
+    text-shadow: 5px 5px black;
+    margin: auto;
 }
 
 form {
@@ -18,41 +23,94 @@ form {
 }
 
 input {
-    border: 8px solid rgb(27, 150, 33);
-    border-radius: 6px;
-    width: 300px;
-    height: 50px;
+    color: rgb(192, 25, 25);
+    border: 5px white;
+    border-radius: 35px;
     outline: none;
-    padding: 5px;
+    padding: 4px 10px;
     font-size: 25px;
     font-family: 'IM Fell English SC', Helvetica, Arial, sans-serif;
+}
+input[type="text"]#actor {
+    width: 300px;
+}
+input[type="text"]#movie {
+    width: 425px;
+}
+
+input::placeholder {
+    color: rgb(77, 75, 75);
 }
 
 button {
     background-color: rgba(0, 0, 0, 0.966);
-    border-radius: 2px;
+    border-radius: 10px;
     border: none;
     color: rgb(255, 255, 255);
     padding: 5px;
+    margin: 1vw;
     text-align: center;
-    font-size: 20px;
-    height: 45px;
-    width: 150px;
+    font-size: 1.75vw;
+    height: 3vw;
+    width: 10vw;
     font-family: 'IM Fell English SC', Helvetica, Arial, sans-serif;
+    
+}
+button:hover, input:hover {
+    box-shadow: 0px 5px 20px 5px #dad7d78f;
 }
 
 #flicks {
     color: white;
-    background-color: rgb(136, 27, 0);
+    text-align: center;
+    background-color: rgba(136, 27, 0, 0);
     height: 100%;
     width: 100%;
     margin: 2px;
     border-radius: 10px;
     padding: 5px;
     font-size: 30px;
-    float: left;
+    margin: auto;
+}
+
+ul{
+    list-style-type: none;
+}
+li {
+    font-size: 2.5vw;
+    margin: auto;
 }
 
 .favorite {
-    color: purple;
+    font-size: 2vw;
+    color: rgb(252, 228, 10);
+    text-shadow: 3px 1px black;
+    text-transform: uppercase;
+    
+}
+
+.delete {
+    font-size: 1.15vw;
+    background-color: red;
+    height: 2vw;
+    width: 8vw;
+   
+}
+
+.fav {
+    font-size: 1.5vw;
+    color: black;
+    background-color: white;
+    height: 2.4vw;
+    width: 7vw;
+    border-radius: 8px;
+}
+
+.favOn {
+    font-size: 1.5vw;
+    color: rgb(255, 255, 255);
+    background-color: rgb(224, 206, 45);
+    height: 2.4vw;
+    width: 7vw;
+    border-radius: 8px;
 }

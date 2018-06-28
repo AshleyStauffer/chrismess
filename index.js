@@ -11,13 +11,12 @@ class App {
     renderProperty(name, value) {
       const span = document.createElement('span')
       span.classList.add(name)
-      span.textContent = value
+      span.textContent = value + ' '
       return span
     }
   
     renderItem(flick) {
       const item = document.createElement('li')
-      // item.classList.add('flick')
   
       // get the list of properties
       const properties = Object.keys(flick)
@@ -28,9 +27,6 @@ class App {
         const span = this.renderProperty(propertyName, flick[propertyName])
         item.appendChild(span)
       })
-
-      
-      
       return item
     }
   
@@ -38,9 +34,8 @@ class App {
       const f = ev.target
   
       const flick = {
-        movie: f.flickName.value,
+        movie: f.flickName.value + ': ',
         chris: f.chrisName.value,
-        
       }
       
       this.flicks.push(flick)
@@ -54,11 +49,12 @@ class App {
       const like = document.createTextNode('Favorite')
       fav.appendChild(like)
       item.appendChild(fav)
+      fav.classList.add('fav')
       
       // make favorite button functional
       fav.addEventListener('click', () => {
           item.classList.toggle('favorite')
-          
+          fav.classList.toggle('favOn')
           let i = this.flicks.indexOf(flick)
           if(flick.favorite == 'YES') {
             flick.favorite = 'NO'
@@ -66,28 +62,23 @@ class App {
           else {
                flick.favorite = 'YES'
           }
-          console.log(flick)
+          
       })
 
       list.appendChild(item)
 
       // add a delete button
       const del = document.createElement('button')
-      const word = document.createTextNode('Remove flick')
+      const word = document.createTextNode('REMOVE')
       del.appendChild(word)
       item.appendChild(del)
+      del.classList.add('delete')
 
       // make delete button functional
       del.addEventListener('click', () => {
         let i = this.flicks.indexOf(flick)
         this.flicks.splice(i, 1)
-
-        while (item.hasChildNodes()) {   
-            item.removeChild(item.firstChild);
-        }
         list.removeChild(item)
-       
-        
       })
       f.reset()
       f.flickName.focus()
