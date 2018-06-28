@@ -28,7 +28,7 @@ input {
     border-radius: 35px;
     outline: none;
     padding: 4px 10px;
-    font-size: 25px;
+    font-size: 2vw;
     font-family: 'IM Fell English SC', Helvetica, Arial, sans-serif;
 }
 input[type="text"]#actor {
@@ -46,6 +46,7 @@ button {
     background-color: rgba(0, 0, 0, 0.966);
     border-radius: 10px;
     border: none;
+    outline: none;
     color: rgb(255, 255, 255);
     padding: 5px;
     margin: 1vw;
@@ -82,35 +83,38 @@ li {
 }
 
 .favorite {
-    font-size: 2vw;
+  
     color: rgb(252, 228, 10);
     text-shadow: 3px 1px black;
-    text-transform: uppercase;
+    
     
 }
 
 .delete {
     font-size: 1.15vw;
     background-color: red;
-    height: 2vw;
-    width: 8vw;
+    height: 2.5vw;
+    width: 3vw;
    
 }
 
 .fav {
     font-size: 1.5vw;
     color: black;
-    background-color: white;
-    height: 2.4vw;
-    width: 7vw;
-    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0);
+    height: 2.7vw;
+    width: 2.7vw;
+    border-radius: 100%;
 }
 
-.favOn {
+button.favOn {
     font-size: 1.5vw;
-    color: rgb(255, 255, 255);
-    background-color: rgb(224, 206, 45);
-    height: 2.4vw;
-    width: 7vw;
-    border-radius: 8px;
+    color: rgb(224, 206, 45);
+    background-color: rgba(255, 255, 255, 0);
+    height: 2.7vw;
+    width: 2.7vw;
+    border-radius: 100%;
+}
+span.favorite{
+    display: none;
 }
