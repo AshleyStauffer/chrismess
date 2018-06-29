@@ -91,7 +91,7 @@ li {
     background-color: red;
     height: 2.5vw;
     width: 3vw;
-   
+    margin: 0vw;
 }
 
 .fav {
@@ -113,4 +113,16 @@ button.favOn {
 }
 span.favorite{
     display: none;
+}
+
+.edit {
+    height: 3vw;
+    width: 3vw;
+    color: black;
+    background-color: rgba(0, 0, 255, 0);
+    margin: 1vw;
+    border-radius: 100%;
+}
+.editOn {
+    color: rgb(46, 115, 179)
 }

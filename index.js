@@ -57,11 +57,12 @@ class App {
         // add an edit button
         const edit = document.createElement('button')
         item.appendChild(edit)
-        
+        edit.classList.add('edit')
         edit.innerHTML = '<i class="fas fa-pencil-alt" title="edit"></i>'
+        item.contentEditable = 'false'
 
         // make edit button functional
-        edit.addEventListener('click', () => this.editContent(flick, item))
+        edit.addEventListener('click', () => this.editContent(flick, item, edit))
     
     }
 
@@ -102,8 +103,8 @@ class App {
         this.save()
     }
 
-    editContent(flick, item) {
-        const newCont = movie.contentEditable
+    editContent(flick, item, edit) {
+        item.contentEditable = edit.classList.toggle('editOn')
     }
 
     addFlick(flick) {
