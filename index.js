@@ -35,11 +35,12 @@ class App {
         // add a favorite button 
         const fav = document.createElement('button')
         item.appendChild(fav)
+        fav.innerHTML = '<i class="fas fa-star" title="Favorite"></i>'
+        
         if(flick.favorite) {
             fav.classList.add('favOn')
         }
         fav.classList.add('fav')
-        fav.innerHTML = '<i class="fas fa-star" title="Favorite"></i>'
 
         // make favorite button functional
         fav.addEventListener('click', () => this.toggleFavorite(flick, item, fav)) 
@@ -52,7 +53,16 @@ class App {
 
         // make delete button functional
         del.addEventListener('click', (_ev) => this.removeFlick(flick, item))
-        return fav;
+
+        // add an edit button
+        const edit = document.createElement('button')
+        item.appendChild(edit)
+        
+        edit.innerHTML = '<i class="fas fa-pencil-alt" title="edit"></i>'
+
+        // make edit button functional
+        edit.addEventListener('click', () => this.editContent(flick, item))
+    
     }
 
     renderProperties(flick, item) {
@@ -90,6 +100,10 @@ class App {
         this.flicks.splice(i, 1)
 
         this.save()
+    }
+
+    editContent(flick, item) {
+        const newCont = movie.contentEditable
     }
 
     addFlick(flick) {

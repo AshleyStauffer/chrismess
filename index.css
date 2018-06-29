@@ -14,7 +14,7 @@ h1 {
     text-align: center;
     font-size: 8vw;
     color: rgb(78, 216, 51);
-    text-shadow: 5px 5px black;
+    text-shadow: .4vw .4vw black;
     margin: auto;
 }
 
@@ -27,15 +27,15 @@ input {
     border: 5px white;
     border-radius: 35px;
     outline: none;
-    padding: 4px 10px;
+    padding: .3vw .8vw;
     font-size: 2vw;
     font-family: 'IM Fell English SC', Helvetica, Arial, sans-serif;
 }
 input[type="text"]#actor {
-    width: 300px;
+    width: 20vw;
 }
 input[type="text"]#movie {
-    width: 425px;
+    width: 30vw;
 }
 
 input::placeholder {
@@ -48,7 +48,7 @@ button {
     border: none;
     outline: none;
     color: rgb(255, 255, 255);
-    padding: 5px;
+    padding: .2vw;
     margin: 1vw;
     text-align: center;
     font-size: 1.75vw;
@@ -64,13 +64,9 @@ button:hover, input:hover {
 #flicks {
     color: white;
     text-align: center;
-    background-color: rgba(136, 27, 0, 0);
-    height: 100%;
-    width: 100%;
     margin: 2px;
     border-radius: 10px;
-    padding: 5px;
-    font-size: 30px;
+    padding: .2vw;
     margin: auto;
 }
 
@@ -85,7 +81,7 @@ li {
 .favorite {
   
     color: rgb(252, 228, 10);
-    text-shadow: 3px 1px black;
+    text-shadow: .2vw .1vw black;
     
     
 }
